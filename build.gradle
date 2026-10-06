@@ -13,6 +13,13 @@ loom {
 	}
 }
 
+sourceSets {
+	client {
+		java.srcDirs = ["Fabric/client/java"]
+		resources.srcDirs = ["Fabric/client/resources"]
+	}
+}
+
 dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
