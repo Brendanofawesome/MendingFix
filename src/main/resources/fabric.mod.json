@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "mendingfix",
+  "version": "${version}",
+  "name": "MendingFix",
+  "description": "Prevents mending repairs from resetting mining progress.",
+  "authors": [
+    "Brendanofawesome"
+  ],
+  "contact": {
+    "sources": "https://github.com/Brendanofawesome/MendingFix"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.brendanofawesome.mixins.MendingFix"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~26.3",
+    "java": ">=25"
+  }
+}
