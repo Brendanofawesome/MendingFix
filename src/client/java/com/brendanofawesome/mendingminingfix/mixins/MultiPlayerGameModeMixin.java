@@ -1,8 +1,8 @@
-package com.brendanofawesome.mixins;
+package com.brendanofawesome.mendingminingfix.mixins;
 
-import com.llamalad7.mixinextras.injector.wrapoperation.BeforeWrapOperation;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.client.multiplayer.MultiPlayerGameMode;
 import org.spongepowered.asm.mixin.Mixin;
@@ -20,6 +20,7 @@ public class MultiPlayerGameModeMixin {
         )
     )
     private static boolean wrapSameDestroyTargetCheck(ItemStack stack1, ItemStack stack2, Operation<Boolean> original) {
+        //ignore type differences if type == DAMAGE
         return ItemStack.matchesIgnoringComponents(stack1, stack2, type -> type == DataComponents.DAMAGE);
     }
 }

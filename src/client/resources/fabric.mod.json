@@ -11,14 +11,12 @@
     "sources": "https://github.com/Brendanofawesome/MendingFix"
   },
   "license": "MIT",
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "com.brendanofawesome.mixins.MendingFix"
-    ]
-  },
+  "environment": "client",
+  "mixins": [
+    "mendingminingfix.mixin.json"
+  ],
   "depends": {
-    "fabricloader": ">=0.16.0",
+    "fabricloader": ">=0.19.5",
     "minecraft": "~26.3",
     "java": ">=25"
   }
